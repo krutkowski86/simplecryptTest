@@ -1,0 +1,25 @@
+<form [formGroup]="formG">
+<label>
+  tokenStamp<br/>
+  <textarea rows="2" cols="50" type="text" [formControl]="tokenStampControl"></textarea>
+</label>  
+<br/>
+<br/>
+<label>
+  encoded string<br/>
+  <textarea rows="10" cols="50" type="text" [formControl]="hashControl"></textarea>
+</label>
+
+<pre>
+  Form value:
+{{formG.getRawValue()|json}}
+</pre>
+
+<hr/>
+decoded string
+<pre>
+  {{decoded|json}}
+</pre>
+
+
+</form>
